@@ -4,7 +4,7 @@
 * [Jump to Database Schema](#database-schema)
 * [Jump to Files Planning](#files-planning)
 
-----------------------------------------------------------------------------
+--
 ## database-schema (MongoDB)
 
 Collections:
@@ -36,7 +36,7 @@ Collections:
         'register_date': '2026-02-06T12:00:00Z'
     }
 
-----------------------------------------------------------------------------
+--
 ## files-planning
 
 smart_inventory/
@@ -59,5 +59,5 @@ smart_inventory/
     ├── conftest.py
     └── test_inventory.py       
 
-----------------------------------------------------------------------------
+--
 ## 
