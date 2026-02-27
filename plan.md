@@ -1,26 +1,20 @@
-                    SMART INVENTORY MANAGEMENT SYSTEM
+                MUSIC STORE MANAGEMENT SYSTEM
 
-Instead of just telling the user what is in the warehouse, the system tells
-them what they need do worry about.
-
-The smart part of the software will be a Reorder Point(ROP) calculation.
-            ROP = (AverageDailyUsage x LeadTime) + SafetyStock
-
-- AverageDailyUsage: Calculated from sales/usage history.
-- Lead Time: How many days it takes for the supplier to deliver.
-- Safety Stock: A "buffer" to prevent running out during a busy week
+## Index
+* [Jump to Database Schema](#database-schema)
+* [Jump to Files Planning](#files-planning)
 
 ----------------------------------------------------------------------------
+## database-schema (MongoDB)
 
-Database Schema(MongoDB)
 Collections:
-    inventory = {
+    item = {
         '_id': 'ObjectId',
-        'sku': '000000',
-        'name': 'ProductName',
-        'category': 'ProductCategory',
+        'sku': SKU,
+        'name': 'guitar',
+        'category': '6 string guitar',
         'price': 'ProductPrice',
-        'current_stock': 'Amount',
+        'current_stock': 10,
         'unit': 'Pcs',
         'lead_time_days': 5,
         'min_safety_stock': 20
@@ -43,8 +37,7 @@ Collections:
     }
 
 ----------------------------------------------------------------------------
-
-----------------------------------------------------------------------------
+## files-planning
 
 smart_inventory/
 ├── app.py              # The "Main" entry point
@@ -64,4 +57,7 @@ smart_inventory/
 │   └── mongo_client.py # Global MongoDB connection
 └── tests/              # The "Insurance" (Pytest)
     ├── conftest.py
-    └── test_inventory.py
+    └── test_inventory.py       
+
+----------------------------------------------------------------------------
+## 
