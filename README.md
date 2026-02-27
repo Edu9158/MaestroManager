@@ -1,15 +1,17 @@
                 MUSIC STORE MANAGEMENT SYSTEM
 
 ## Index
-* [Jump to Database Schema](#database_Schema)
-* [Jump to Files Planning](#files_Planning)
+* [Jump to Database Schema](#database_schema)
+* [Jump to Files Planning](#files_planning)
 
 ---
-## database_Schema (MongoDB)
+## database_schema (MongoDB)
+> MongoDB Atlas <-------------------------------------------------------
 
 ```python
+# Just a model schema for mongo database collections.
 #-------Collections-------
-    item = {
+    product = {
         '_id': ObjectId(),
         'sku': 111111,
         'name': 'Guitar',
@@ -17,48 +19,45 @@
         'color': 'red',
         'brand': 'ibanez',
         'price': 600.00,
-        'current_Stock': 10,
+        'weight': '5 kg',
+        'current_stock': 10,
         'unit': 'Pçs',
-        'load_Date': "2026-02-27",
-        'id_Load': 111,
+        'load_date': "2026-02-27",
+        'id_load': 111
     }
 
     load = {
         '_id': ObjectId(),
-        'id_Load': 111,
-        'load_Date': "2026-02-27",
+        'id_load': 11,
+        'sku': 111111,
+        'load_date': "2026-02-27",
         'placa': 'ABC-1234',
-        'sequency': 2,
-        'status': 1,
-        'idorca': 5,
-        'nomfan': 'ABC FOODS LTDA',
-        'razdoc': 'ABC FOODS LTDA',
-        'cnpjcl': '00.000.000/0000-00',
-        'cidcli': 'ABC',
-        'cepcli': '11111-111',
-        'endereco': "RUA ABC N 123",
-        'idenit': 1,
-        'qtdent': 100,
-        'idprod': test_products[0]['idprod'],
-        'numnfe': '',
-        'syncDate': datetime.now(timezone.utc),
+        'nom_fan': 'ABC FOODS LTDA',
+        'raz_soc': 'ABC FOODS LTDA',
+        'cnpj_cli': '00.000.000/0000-00',
+        'cid_cli': 'ABC',
+        'cep_cli': '11111-111',
+        'address': "RUA ABC N 123",
+        'total_load': 100,
+        'unit': 'Pçs',
+        'num_nfe': 123-456,
     }
 
-    nfe = {
-        
-    }
-
-    transaction = {
+    sale = {
         '_id': ObjectId(),
-        'sku': 111111,   
-        'type': 'OUT', // or 'IN'
-        'quantity': 10,
-        'timestamp': '2026-02-06T12:00:00Z',
-        'user_id': 'user_01'
+        'items_sku': {
+            
+        },
+        'sale_price':,
+        'quantity': 1,
+        'sale_date': "2026-02-27",
+        'user_id': 1,
+        'client_id': 1
     }
 
     client = {
         '_id': ObjectId(),
+        'client_id':,
         'cpf': 'Clientcpf',
         'name': 'ClientName',
         'phone': 'ClientPhone',
@@ -68,6 +67,7 @@
 
     user = {
         '_id': ObjectId(),
+        'user_id': 1,
     }
 ```
 
