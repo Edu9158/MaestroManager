@@ -1,11 +1,11 @@
                 MUSIC STORE MANAGEMENT SYSTEM
 
 ## Index
-* [Jump to Database Schema](#database-schema)
-* [Jump to Files Planning](#files-planning)
+* [Jump to Database Schema](#database_Schema)
+* [Jump to Files Planning](#files_Planning)
 
---
-## database-schema (MongoDB)
+---
+## database_Schema (MongoDB)
 
 Collections:
     item = {
@@ -36,8 +36,8 @@ Collections:
         'register_date': '2026-02-06T12:00:00Z'
     }
 
---
-## files-planning
+---
+## files_Planning
 
 smart_inventory/
 ├── app.py              # The "Main" entry point
@@ -59,5 +59,5 @@ smart_inventory/
     ├── conftest.py
     └── test_inventory.py       
 
---
+---
 ## 
