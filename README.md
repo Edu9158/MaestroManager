@@ -7,36 +7,69 @@
 ---
 ## database_Schema (MongoDB)
 
-<pre>
-Collections:
+```python
+#-------Collections-------
     item = {
-        '_id': 'ObjectId',
-        'sku': SKU,
-        'name': 'guitar',
+        '_id': ObjectId(),
+        'sku': 111111,
+        'name': 'Guitar',
         'category': '6 string guitar',
-        'price': 'ProductPrice',
-        'current_stock': 10,
-        'unit': 'Pcs',
-        'lead_time_days': 5,
-        'min_safety_stock': 20
-    },
+        'color': 'red',
+        'brand': 'ibanez',
+        'price': 600.00,
+        'current_Stock': 10,
+        'unit': 'Pçs',
+        'load_Date': "2026-02-27",
+        'id_Load': 111,
+    }
+
+    load = {
+        '_id': ObjectId(),
+        'id_Load': 111,
+        'load_Date': "2026-02-27",
+        'placa': 'ABC-1234',
+        'sequency': 2,
+        'status': 1,
+        'idorca': 5,
+        'nomfan': 'ABC FOODS LTDA',
+        'razdoc': 'ABC FOODS LTDA',
+        'cnpjcl': '00.000.000/0000-00',
+        'cidcli': 'ABC',
+        'cepcli': '11111-111',
+        'endereco': "RUA ABC N 123",
+        'idenit': 1,
+        'qtdent': 100,
+        'idprod': test_products[0]['idprod'],
+        'numnfe': '',
+        'syncDate': datetime.now(timezone.utc),
+    }
+
+    nfe = {
+        
+    }
+
     transaction = {
-        '_id': 'ObjectId',
-        'sku': '000000',   
+        '_id': ObjectId(),
+        'sku': 111111,   
         'type': 'OUT', // or 'IN'
         'quantity': 10,
         'timestamp': '2026-02-06T12:00:00Z',
         'user_id': 'user_01'
-    },
+    }
+
     client = {
-        'id': 'ObjectId',
+        '_id': ObjectId(),
         'cpf': 'Clientcpf',
         'name': 'ClientName',
         'phone': 'ClientPhone',
         'email': 'ClientEmail',
         'register_date': '2026-02-06T12:00:00Z'
     }
-</pre>
+
+    user = {
+        '_id': ObjectId(),
+    }
+```
 
 ---
 ## files_Planning
