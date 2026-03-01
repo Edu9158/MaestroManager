@@ -1,4 +1,4 @@
-                MUSIC STORE MANAGEMENT SYSTEM
+            MUSIC STORE MANAGEMENT SYSTEM (Maestro Manager)
 
 ## Index
 * [Jump to Database Schema](#database_schema)
@@ -23,12 +23,25 @@
         'current_stock': 10,
         'unit': 'Pçs',
         'load_date': "2026-02-27",
-        'id_load': 111
+        'id_load': 1
+    },{
+        '_id': ObjectId(),
+        'sku': 111112,
+        'name': 'Bass',
+        'category': '4 string bass',
+        'color': 'spark red',
+        'brand': 'ibanez',
+        'price': 800.00,
+        'weight': '6.5 kg',
+        'current_stock': 8,
+        'unit': 'Pçs',
+        'load_date': "2026-02-27",
+        'id_load': 1
     }
 
     load = {
         '_id': ObjectId(),
-        'id_load': 11,
+        'id_load': 1,
         'sku': 111111,
         'load_date': "2026-02-27",
         'placa': 'ABC-1234',
@@ -45,10 +58,19 @@
 
     sale = {
         '_id': ObjectId(),
-        'items_sku': {
-            
-        },
-        'sale_price':,
+        'sale_id': 1,
+        'items_sku': [
+            {
+                'product.sku': 111111,
+                'product.price': 600.00, # Item 1 price
+                'product.name':'Guitar'
+            },{
+                'product.sku': 111112,
+                'product.price': 800.00, # Item 2 price
+                'product.name':'Bass'
+            }
+        ],
+        'sale_price': 1400.00, # (item 1 + item 2)
         'quantity': 1,
         'sale_date': "2026-02-27",
         'user_id': 1,
@@ -57,17 +79,22 @@
 
     client = {
         '_id': ObjectId(),
-        'client_id':,
-        'cpf': 'Clientcpf',
-        'name': 'ClientName',
-        'phone': 'ClientPhone',
-        'email': 'ClientEmail',
-        'register_date': '2026-02-06T12:00:00Z'
+        'client_id': 1,
+        'cpf': '000.000.000-00', # Could be a CNPJ
+        'name': 'José',
+        'phone': '+554400000000',
+        'email': 'fictitious@email.com',
+        'register_date': "2026-02-27"
     }
 
     user = {
         '_id': ObjectId(),
         'user_id': 1,
+        'cpf': '000.000.000-00', 
+        'name': 'Flavinho',
+        'phone': '+554400000000',
+        'email': 'fictitious@email.com',
+        'register_date': "2026-02-27"
     }
 ```
 
