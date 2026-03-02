@@ -1,14 +1,17 @@
 """
 Database connection module.
 """
+from config import config
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-from config import config
+from dotenv import load_dotenv
 
 class DB(object):
     """
     Stablishes a DB instance.
     """
+    
+
     url = config.MONGO_CONNECTION_URL
 
     # Create a new client and connect to the server
