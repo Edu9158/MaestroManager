@@ -10,10 +10,8 @@ class DB(object):
     """
     Stablishes a DB instance.
     """
-    
-
     url = config.MONGO_CONNECTION_URL
-
+    print(f'-----> {url}')
     # Create a new client and connect to the server
     client = MongoClient(url, server_api = ServerApi('1'))
 
