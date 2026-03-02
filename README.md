@@ -2,7 +2,7 @@
 
 ## Index
 * [Jump to Database Schema](#database_schema)
-* [Jump to Files Planning](#files_planning)
+* [Jump to System Functions](#system_functions)
 
 ---
 ## database_schema (MongoDB)
@@ -42,7 +42,13 @@
     load = {
         '_id': ObjectId(),
         'id_load': 1,
-        'sku': 111111,
+        'sku': [
+            {
+                'product.name': 'Guitar',
+                'product.sku': 111112,
+                'purchase_price': 500.00,
+            }
+        ]
         'load_date': "2026-02-27",
         'placa': 'ABC-1234',
         'nom_fan': 'ABC FOODS LTDA',
@@ -64,6 +70,7 @@
                 'product.sku': 111111,
                 'product.price': 600.00, # Item 1 price
                 'product.name':'Guitar'
+                'quantity': 2
             },{
                 'product.sku': 111112,
                 'product.price': 800.00, # Item 2 price
@@ -97,29 +104,5 @@
         'register_date': "2026-02-27"
     }
 ```
-
 ---
-## files_Planning
-
-smart_inventory/
-├── app.py              # The "Main" entry point
-├── requirements.txt    # Your library list
-├── .env                # Secret keys (DB URL, Token secrets)
-├── .gitignore          # Ignore venv/, .env, and __pycache__
-├── core/               # The "Brain" (Business Logic)
-│   ├── __init__.py
-│   ├── inventory.py    # Logic for ROP, stock calculations
-│   └── auth.py         # Logic for login and tokens
-├── routes/             # The "Voice" (API Endpoints)
-│   ├── __init__.py
-│   ├── tracking.py     # Flask Blueprints for stock moves
-│   └── users.py        # Blueprints for user management
-├── database/           # The "Memory" (Connection logic)
-│   ├── __init__.py
-│   └── mongo_client.py # Global MongoDB connection
-└── tests/              # The "Insurance" (Pytest)
-    ├── conftest.py
-    └── test_inventory.py       
-
----
-## 
+## system_function
